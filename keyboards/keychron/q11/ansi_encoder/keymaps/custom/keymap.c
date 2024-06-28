@@ -8,6 +8,14 @@
 #include "quantum.h"
 #include QMK_KEYBOARD_H
 
+enum custom_keycodes_user {
+    SEND_EMAIL = SAFE_RANGE,
+    MAC_LOCK,
+    WIN_LOCK,
+    WIN_BRIU,
+    WIN_BRID,
+};
+
 enum layers{
     MAC_BASE,
     MAC_FN,
@@ -15,14 +23,6 @@ enum layers{
     WIN_BASE,
     WIN_FN,
     WIN_EX,
-};
-
-enum custom_keycodes_user {
-    SEND_EMAIL = SAFE_RANGE,
-    MAC_LOCK,
-    WIN_LOCK,
-    WIN_BRIU,
-    WIN_BRID,
 };
 
 bool dip_switch_update_user(uint8_t index, bool active) {
