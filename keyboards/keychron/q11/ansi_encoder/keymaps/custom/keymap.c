@@ -17,7 +17,7 @@ enum layers{
     WIN_EX,
 };
 
-enum custom_keycodes_local {
+enum custom_keycodes_user {
     SEND_EMAIL = SAFE_RANGE,
     MAC_LOCK,
     WIN_LOCK,
