@@ -17,6 +17,13 @@ enum layers{
     WIN_EX,
 };
 
+const key_override_t shift_space_override = ko_make_basic(MOD_MASK_SHIFT, KC_SPC, KC_BSPC);
+
+const key_override_t **key_overrides = (const key_override_t *[]){
+	&shift_space_override,
+	NULL
+};
+
 bool dip_switch_update_user(uint8_t index, bool active) {
     if (index == 0) {
         default_layer_set(1UL << (active ? MAC_BASE : WIN_BASE));
