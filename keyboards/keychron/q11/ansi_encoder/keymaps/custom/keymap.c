@@ -1,11 +1,3 @@
-#include <stdbool.h>
-#include "action.h"
-#include "config.h"
-#include "keycodes.h"
-#include "quantum_keycodes.h"
-#include "send_string_keycodes.h"
-#include "assert.h"
-#include "quantum.h"
 #include QMK_KEYBOARD_H
 
 enum custom_keycodes_user {
