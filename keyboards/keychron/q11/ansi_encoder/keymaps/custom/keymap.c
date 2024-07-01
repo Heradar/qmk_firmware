@@ -1,4 +1,3 @@
-#include "keycodes.h"
 #include QMK_KEYBOARD_H
 
 enum custom_keycodes_user {
@@ -17,12 +16,11 @@ enum layers{
 };
 
 /*const key_override_t shift_space_override = ko_make_basic(MOD_MASK_SHIFT, KC_SPC, KC_BSPC);*/
-const key_override_t shift_space_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_SPC, KC_BSPC, (1 << MAC_BASE | 1 << MAC_FN | 1 << WIN_BASE | 1 << WIN_FN));
-
-const key_override_t **key_overrides = (const key_override_t *[]){
-	&shift_space_override,
-	NULL
-};
+/**/
+/*const key_override_t **key_overrides = (const key_override_t *[]){*/
+/*	&shift_space_override,*/
+/*	NULL*/
+/*};*/
 
 bool dip_switch_update_user(uint8_t index, bool active) {
     if (index == 0) {
