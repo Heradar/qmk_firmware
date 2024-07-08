@@ -23,7 +23,6 @@ enum layers{
 /*	&shift_space_override,*/
 /*	NULL*/
 /*};*/
-
 bool dip_switch_update_user(uint8_t index, bool active) {
     if (index == 0) {
         default_layer_set(1UL << (active ? MAC_BASE : WIN_BASE));
@@ -35,7 +34,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SEND_EMAIL:
             if (record->event.pressed) {
-                SEND_STRING("example@example.com");
+                send_string_with_delay("example@example.com", 3);
                 #error "enter email before compiling";
             }
             break;
